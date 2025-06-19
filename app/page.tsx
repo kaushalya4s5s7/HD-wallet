@@ -5,6 +5,8 @@ import { generateMnemonic } from "bip39"
 import SolanaWallet from "@/components/SolanaWallet"
 import EthWallet from "@/components/EthWallet"
 import { Copy, RefreshCw, Wallet, Shield } from "lucide-react"
+import {WalletButton} from "@/components/WalletButton"
+import Link from "next/link"
 
 export default function CryptoWalletGenerator() {
   const [mnemonic, setMnemonic] = useState<string>("")
@@ -41,6 +43,12 @@ export default function CryptoWalletGenerator() {
               <span className="font-black text-2xl tracking-tighter ml-4 text-white uppercase">CRYPTO.VAULT</span>
             </div>
           </div>
+          <div> <Link href="/devtools">
+              <button className="bg-blue-600 text-white border-4 border-black px-6 py-3 font-bold text-lg shadow-brutal hover:translate-y-1 hover:shadow-none transition-all">
+                Go to Solana Devtools
+              </button>
+            </Link></div>
+         
           <div className="text-white font-bold text-sm uppercase tracking-wider">MULTI-CHAIN WALLET GENERATOR</div>
         </div>
       </header>
