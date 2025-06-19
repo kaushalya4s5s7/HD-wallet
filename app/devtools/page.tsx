@@ -3,7 +3,7 @@ import { WalletButton } from "@/components/WalletButton"
 
 const devtools =()=>{
     return(<div>
-    <WalletButton/>
+   
         <Devtools/>
    
     </div>)

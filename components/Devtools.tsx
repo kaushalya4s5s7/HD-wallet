@@ -3,6 +3,7 @@ import { useWallet } from "@solana/wallet-adapter-react";
 import {  useState } from "react";
 import { useConnection } from "@solana/wallet-adapter-react";
 import { Toaster,toast } from "sonner";
+import { WalletButton } from "./WalletButton";
 
 
 const Devtools= ()=>{
@@ -56,8 +57,10 @@ const Devtools= ()=>{
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-background">
+            
             <section className="w-full max-w-md mx-auto space-y-8 flex flex-col items-center">
                 <div className="bg-white border-8 border-black p-8 shadow-brutal w-full rounded-lg flex flex-col items-center">
+                    <div className="p-4"> <WalletButton/></div>
                     <h2 className="text-3xl font-black mb-6 uppercase border-b-4 border-black pb-2 text-center w-full">Airdrop SOL</h2>
                     <input
                         type="number"
